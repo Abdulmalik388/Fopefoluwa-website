@@ -148,7 +148,7 @@
                         <img src="{{ asset('assets/img/gallery/about2.png') }}" alt="Community Work">
                     </div>
                     <div class="about-back-img">
-                        <img src="{{ asset('assets/img/gallery/about1.png') }}" alt="Helping Hands">
+                        <img src="{{ asset('assets/img/gallery/food-3.jpg') }}" style="height: 500px;width: 400px; border-radius: 8px; object-fit: cover;" alt="Helping Hands">
                     </div>
                 </div>
             </div>

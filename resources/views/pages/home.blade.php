@@ -184,7 +184,7 @@
                         <img src="{{ asset('assets/img/gallery/about2.png') }}" alt="Community Work">
                     </div>
                     <div class="about-back-img">
-                        <img src="{{ asset('assets/img/gallery/about1.png') }}" alt="Helping Hands">
+                        <img src="{{ asset('assets/img/gallery/food-2.jpg') }}" style="height: 500px;width: 400px; border-radius: 8px; object-fit: cover;" alt="Helping Hands">
                     </div>
                 </div>
             </div>
@@ -194,99 +194,59 @@
 
     <!-- About Law End-->
     <!-- Our Cases Start -->
-    <div class="our-cases-area section-padding30">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle text-center mb-80">
-                        <span>Our Cases you can see</span>
-                        <h2>Explore our latest causes that we works </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cases mb-40">
-                        <div class="cases-img">
-                            <img src="assets/img/gallery/case1.png" alt="">
-                        </div>
-                        <div class="cases-caption">
-                            <h3><a href="#">Ensure Education For Every Poor Children</a></h3>
-                            <!-- Progress Bar -->
-                            <div class="single-skill mb-15">
-                                <div class="bar-progress">
-                                    <div id="bar1" class="barfiller">
-                                        <div class="tipWrap">
-                                            <span class="tip"></span>
-                                        </div>
-                                        <span class="fill" data-percentage="70"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- / progress -->
-                            <div class="prices d-flex justify-content-between">
-                                <p>Raised:<span> $20,000</span></p>
-                                <p>Goal:<span> $35,000</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cases mb-40">
-                        <div class="cases-img">
-                            <img src="assets/img/gallery/case2.png" alt="">
-                        </div>
-                        <div class="cases-caption">
-                            <h3><a href="#">Providing Healthy Food For The Children</a></h3>
-                            <!-- Progress Bar -->
-                            <div class="single-skill mb-15">
-                                <div class="bar-progress">
-                                    <div id="bar2" class="barfiller">
-                                        <div class="tipWrap">
-                                            <span class="tip"></span>
-                                        </div>
-                                        <span class="fill" data-percentage="25"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- / progress -->
-                            <div class="prices d-flex justify-content-between">
-                                <p>Raised:<span> $20,000</span></p>
-                                <p>Goal:<span> $35,000</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cases mb-40">
-                        <div class="cases-img">
-                            <img src="assets/img/gallery/case3.png" alt="">
-                        </div>
-                        <div class="cases-caption">
-                            <h3><a href="#">Supply Drinking Water For  The People</a></h3>
-                            <!-- Progress Bar -->
-                            <div class="single-skill mb-15">
-                                <div class="bar-progress">
-                                    <div id="bar3" class="barfiller">
-                                        <div class="tipWrap">
-                                            <span class="tip"></span>
-                                        </div>
-                                        <span class="fill" data-percentage="50"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- / progress -->
-                            <div class="prices d-flex justify-content-between">
-                                <p>Raised:<span> $20,000</span></p>
-                                <p>Goal:<span> $35,000</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="our-cases-area section-padding30" style="background:#f9f9f9;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+        <!-- Section Title -->
+        <div class="section-tittle text-center mb-60">
+          <span>What We Do</span>
+          <h2>Our Focus Areas at Fopefoluwa Foundation</h2>
+          <p class="text-muted">We are committed to improving lives through impactful programs and sustainable projects.</p>
         </div>
+      </div>
     </div>
+    <div class="row">
+      <!-- Single Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <div class="card-body">
+            <div class="mb-3">
+              <img src="assets/img/gallery/education.jpg" alt="Education" style="width:70%; height: 250px; border-radius:8px;">
+            </div>
+            <h4 class="card-title mb-3">Quality Education</h4>
+            <p class="card-text text-muted">Providing access to education for underprivileged children and creating opportunities for a brighter future.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Single Card -->
+      <div class="col-lg-4 col-md-6 mb-4 ">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <div class="card-body">
+            <div class="mb-3">
+              <img src="assets/img/gallery/food.jpg" alt="Food" style="width:70%; height: 250px; border-radius:8px;">
+            </div>
+            <h4 class="card-title mb-3">Healthy Feeding</h4>
+            <p class="card-text text-muted">Ensuring children and families in need have access to nutritious meals and support for better living.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Single Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <div class="card-body">
+            <div class="mb-3">
+              <img src="assets/img/gallery/clean-water.jpeg" alt="Water" style="width:70%; height: 250px; border-radius:8px;">
+            </div>
+            <h4 class="card-title mb-3">Clean Water</h4>
+            <p class="card-text text-muted">Providing clean and safe drinking water to communities for improved health and well-being.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Our Cases End -->
     <!-- Featured_job_start -->
 <section class="featured-job-area section-padding30 section-bg2" data-background="{{ asset('assets/img/gallery/section_bg03.png') }}">

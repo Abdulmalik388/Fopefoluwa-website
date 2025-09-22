@@ -12,5 +12,10 @@ Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::get('/team', [PagesController::class, 'team'])->name('team');
 
 // Admin
-Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');
+
+
+
+Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
