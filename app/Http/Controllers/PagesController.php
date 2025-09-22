@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -18,8 +19,14 @@ class PagesController extends Controller
 
     public function blog()
     {
-        return view('pages.blog');
+        $blogs = Blog::latest()->paginate(100);
+        return view('pages.blog', compact('blogs'));
     }
+    public function show(Blog $blog)
+{
+    return view('pages.blog-show', compact('blog'));
+}
+
 
     public function donate()
     {
