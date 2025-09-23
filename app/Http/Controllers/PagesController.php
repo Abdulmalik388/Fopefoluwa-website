@@ -9,7 +9,8 @@ class PagesController extends Controller
 {
     public function home()
     {
-        return view('pages.home');
+         $blogs = Blog::latest()->take(3)->get();
+        return view('pages.home', compact('blogs'));
     }
 
     public function about()
