@@ -9,7 +9,7 @@
                         <div class="single-footer-caption mb-50">
                             <div class="footer-logo mb-20">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('assets/img/logo/logo2_footer.png') }}" alt="Fopefoluwa Foundation">
+                                    <img src="{{ asset('assets/img/logo/logo.png') }}" style="height:70px; width: 70px;" alt="Fopefoluwa Foundation">
                                 </a>
                             </div>
                             <p class="text-white">Fopefoluwa Foundation – Home of Love & Charity.</p>
@@ -26,7 +26,7 @@
                                         <p><strong>Address:</strong> Suite A6 Amori Shopping Complex, Orelope Bus Stop, Egbeda, Lagos.</p>
                                     </li>
                                     <li>
-                                        <p><strong>Phone:</strong> <a href="tel:+2348177318070">0817 731 8070</a></p>
+                                        <p><strong>Phone:</strong> <a href="tel:+2348069179991">0806 917 9991</a></p>
                                     </li>
                                     <li>
                                         <p><strong>Email:</strong> 

@@ -1,8 +1,7 @@
 @extends('admin.layouts.sidebar')
 
-
-<div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
-    <div class="w-100" style="max-width: 1000px;">
+<div class="container d-flex justify-content-end align-items-center" style="min-height: 90vh;">
+    <div class="w-100" style="max-width: 1000px; margin-left: auto;">
         <!-- Dashboard Heading -->
         <div class="text-center mb-5">
             <h1 class="fw-bold text-primary">Admin Dashboard</h1>
@@ -12,7 +11,7 @@
         <!-- Dashboard Cards -->
         <div class="row g-4 justify-content-center">
             <!-- Total Blogs -->
-          <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="card shadow-sm border-0 h-100 text-center rounded-4">
                     <div class="card-body">
                         <div class="mb-3">
@@ -55,7 +54,7 @@
         </div>
 
         <!-- Notes Section -->
-        <div class="mt-5">
+        <div class="mt-5" style="margin-left: 35px;">
             <div class="card shadow-sm border-0 rounded-4">
                 <div class="card-body">
                     <h4 class="fw-bold text-primary mb-3">
@@ -72,4 +71,3 @@
         </div>
     </div>
 </div>
-

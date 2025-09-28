@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function home()
-    {
-         $blogs = Blog::latest()->take(3)->get();
-        return view('pages.home', compact('blogs'));
-    }
+   public function home()
+{
+    $blogs = Blog::latest()->take(3)->get();
+    $team = Team::latest()->take(3)->get(); // fetch 3 latest team members
+
+    return view('pages.home', compact('blogs', 'team'));
+}
+
 
     public function about()
     {
@@ -38,8 +42,10 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
-      public function team()
+         public function team()
     {
-        return view('pages.team');
+        $team = Team::orderBy('id', 'asc')->get(); // or ->latest() if you want newest first
+        return view('pages.team', compact('team')); // make sure blade is resources/views/pages/team.blade.php
     }
+
 }

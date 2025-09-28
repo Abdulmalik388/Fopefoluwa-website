@@ -20,7 +20,7 @@
             <h2 class="mb-4">Want to make a donation?</h2>
             <p class="mb-4">Click the button below to reach us on WhatsApp and let us know how you’d like to support.</p>
             
-            <a href="https://wa.me/2348177318070?text=Hello,%20I%20am%20from%20the%20Fopefoluwa%20Foundation%20website.%20I%20want%20to%20donate%20to%20the%20foundation."
+            <a href="https://wa.me/2348069179991?text=Hello,%20I%20am%20from%20the%20Fopefoluwa%20Foundation%20website.%20I%20want%20to%20donate%20to%20the%20foundation."
                class="btn btn-success btn-lg" target="_blank">
                 <i class="fab fa-whatsapp"></i> Donate via WhatsApp
             </a>

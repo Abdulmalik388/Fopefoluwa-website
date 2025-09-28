@@ -49,6 +49,8 @@
     <a href="{{ route('admin.dashboard') }}">🏠 Home</a>
     <a href="{{ route('admin.blogs.create') }}">➕ Add Blog</a>
     <a href="{{ route('admin.blogs.index') }}">📄 Blogs</a>
+    <a href="{{ route('admin.team.index') }}">  👥 Team</a>
+    <a href="{{ route('admin.team.create') }}">  👥 Add Team </a>
     <form action="{{ route('admin.logout') }}" method="POST" style="display:inline;">
     @csrf
     <button type="submit" class="btn btn-danger btn-lg p-1" style="margin-left: 22px;" >

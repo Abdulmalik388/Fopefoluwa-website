@@ -23,7 +23,7 @@
                                         <a href="{{ route('contact') }}" class="cal-btn ml-15" data-animation="fadeInRight"
                                             data-delay="1.0s">
                                             <i class="flaticon-null"></i>
-                                            <p>+234 817 731 8070</p>
+                                            <p>+234 806 917 9991</p>
                                         </a>
                                     </div>
                                 </div>
@@ -354,89 +354,52 @@
 
         <!-- Featured_job_end -->
         <!--? Team Ara Start -->
-        <div class="team-area pt-160 pb-160">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle2 text-center mb-70">
-                            <span>What we are doing</span>
-                            <h2>Our Expert Volunteer Always ready</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team1.png" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Bruce Roberts</a></h3>
-                                <p>Volunteer leader</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team2.png" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Robart Rechard</a></h3>
-                                <p>Volunteer leader</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team3.png" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Brendon Tailor</a></h3>
-                                <p>Volunteer leader</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team4.png" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Walshr Hasgt</a></h3>
-                                <p>Volunteer leader</p>
-                            </div>
-                        </div>
-                    </div>
+<div class="team-area pt-160 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                <!-- Section Title -->
+                <div class="section-tittle section-tittle2 text-center mb-70">
+                    <span>What we are doing</span>
+                    <h2>Meet Our Team</h2>
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center">
+            @forelse($team->take(3) as $member)
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-team text-center mb-30">
+                        <div class="team-img">
+                            <img src="{{ asset($member->image) }}" 
+                                 alt="{{ $member->name }}" 
+                                 style="width: 100%; height: 280px; object-fit: cover; border-radius: 10px;">
+                        </div>
+                        <div class="team-caption mt-3">
+                            <h4 class="fw-bold">{{ $member->name }}</h4>
+                            <p class="text-muted">{{ $member->post }}</p>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                <div class="col-12 text-center">
+                    <p class="text-muted">No team members yet.</p>
+                </div>
+            @endforelse
+        </div>
+
+        <!-- Button to view all team -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="{{ route('team') }}" class="btn btn-primary">
+                    View All Team
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
         <!-- Team Ara End -->
         <!-- Want To work -->
         <section class="wantToWork-area ">
@@ -456,6 +419,42 @@
             </div>
         </section>
         <!-- Want To work End -->
+         <section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+            <div class="col-lg-8">
+                <h2 class="fw-bold text-primary">Our CAC Certificate</h2>
+                <p class="text-muted">
+                    We are a registered business with the Corporate Affairs Commission (CAC). 
+                    This certificate confirms our authenticity and commitment to providing trusted services.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body text-center">
+                        <img src="{{ asset('storage/certificate/cac_certificate.jpg') }}" 
+                             alt="CAC Certificate" 
+                             class="img-fluid rounded-3 border" 
+                             style="max-height: 500px; object-fit: contain;">
+
+                        <div class="mt-3">
+                            <a href="{{ asset('storage/certificate/cac_certificate.jpg') }}" 
+                               target="_blank" 
+                               class="btn btn-outline-primary">
+                                <i class="bi bi-eye"></i> View Full Certificate
+                            </a>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!--? Testimonial Start -->
         <div class="testimonial-area testimonial-padding">
             <div class="container">
@@ -468,7 +467,7 @@
                                     <div class="founder-img mb-4">
                                         <img src="assets/img/gallery/Director.jpg" alt="Founder" class="rounded-circle"
                                             style="width:200px;height:200px;object-fit:cover;">
-                                        <h4 class="mt-3 mb-0">Alhaji Ademola Lawal</h4>
+                                        <h4 class="mt-3 mb-0">Mr  Iwalewa John Babatunde</h4>
                                         <p class="text-muted">Creative Director</p>
                                     </div>
                                 </div>
@@ -478,7 +477,7 @@
                                         to uplifting those in need. Every effort we make is a step toward building a
                                         healthier, more hopeful future for our communities. Together, through kindness and
                                         dedication, we can create lasting change and inspire others to join us on this
-                                        journey."
+                                        journey." <br> Slogan: All For Charity.
                                     </p>
                                 </div>
                             </div>

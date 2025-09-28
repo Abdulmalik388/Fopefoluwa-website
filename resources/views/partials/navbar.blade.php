@@ -31,7 +31,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="{{ asset('assets/img/logo/loder.png') }}" alt="loader">
+                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="loader">
                 </div>
             </div>
         </div>
@@ -51,7 +51,9 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-6 col-6">
                                 <div class="logo">
-                                    <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo"></a>
+                                    <a href="{{ url('/') }}">
+                                        <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo" style="height:70px; width: 70px;">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10 col-md-6 col-6">
