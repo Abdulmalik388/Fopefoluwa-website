@@ -172,7 +172,7 @@
                 </div>
                 <!-- Button -->
                 <div class="col-xl-3 col-lg-3 col-md-4 text-md-right text-center">
-                    <a href="{{ route('contact') }}" class="btn white-btn sm-left">Become a Volunteer</a>
+                    <a href="{{ route('contact') }}" class="btn white-btn sm-left">Want to become Volunteer</a>
                 </div>
             </div>
         </div>

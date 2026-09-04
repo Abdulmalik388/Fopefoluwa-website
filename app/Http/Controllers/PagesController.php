@@ -28,9 +28,10 @@ class PagesController extends Controller
         return view('pages.blog', compact('blogs'));
     }
     public function show(Blog $blog)
-{
-    return view('pages.blog-show', compact('blog'));
-}
+    {
+        $blog->load(['comments.replies', 'allComments']);
+        return view('pages.blog-show', compact('blog'));
+    }
 
 
     public function donate()

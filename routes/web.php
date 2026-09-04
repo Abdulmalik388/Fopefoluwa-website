@@ -4,26 +4,27 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\CommentController;
 
 // Public Pages
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/blog', [PagesController::class, 'blog'])->name('blog');
+Route::get('/blogs', [PagesController::class, 'blog'])->name('blogs'); // Alias
 Route::get('/blogs/{blog}', [PagesController::class, 'show'])->name('blogs.show');
+Route::get('/blog/{blog}', [PagesController::class, 'show'])->name('blog.show'); // Alias
+
+Route::post('/blogs/{blog}/comments', [CommentController::class, 'store'])->name('comments.store');
 
 Route::get('/donate', [PagesController::class, 'donate'])->name('donate');
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::get('/team', [PagesController::class, 'team'])->name('team');
 
 // Admin
-
-
-
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
-
+Route::match(['get', 'post'], '/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 Route::prefix('admin')->group(function () {
     Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blogs.index');
@@ -54,3 +55,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
     // Delete member
     Route::delete('/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
 });
+
